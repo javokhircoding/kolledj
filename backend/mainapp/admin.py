@@ -5,7 +5,6 @@ from .models import Elonlar, Yangiliklar
 @admin.register(Elonlar)
 class ElonlarAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'slug', 'date']
-    readonly_fields = ['slug']
     list_display_links = ['title']
     prepopulated_fields = {'slug': ('title',)}
 
@@ -13,6 +12,5 @@ class ElonlarAdmin(admin.ModelAdmin):
 @admin.register(Yangiliklar)
 class YangiliklarAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'slug', 'date']
-    readonly_fields = ['slug']
     list_display_links = ['title']
     prepopulated_fields = {'slug': ('title',)}
