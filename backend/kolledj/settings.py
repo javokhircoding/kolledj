@@ -74,23 +74,15 @@ TEMPLATES = [
     },
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",
-]
+#CSRF_TRUSTED_ORIGINS = []
 
-CORS_URLS_REGEX = r"^/tasks/.*$"
+#CORS_URLS_REGEX = r"^/tasks/.*$"
 
 CORS_ALLOW_CREDENTIALS = True
 
-CORS_ALLOWED_ORIGINS = []
+#CORS_ALLOWED_ORIGINS = []
 
 CORS_ALLOW_ALL_ORIGINS = True    
-
-if DEBUG:
-    CORS_ALLOWED_ORIGINS += [
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ]
 
 WSGI_APPLICATION = 'kolledj.wsgi.application'
 
@@ -140,7 +132,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static    '
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
