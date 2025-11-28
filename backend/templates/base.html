@@ -84,18 +84,21 @@
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- header top -->
-        
-        <div class="header-logo-support pt-30 pb-30">
+
+        <div class="header-logo-support pt-10 pb-10">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-4 col-md-4 hdr-logo">
                         <div class="logo">
                             <a href="index.html">
                                 <img src="{% static 'images/logo.png' %}" alt="Logo">
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-8 col-md-8">
+                    <div class="ml-20 section-title">
+                        <h1 class="hdr-title">Toshkent Turizm va Madaniy Meros texnikumi</h1>
+                    </div>
+                    <div class="col-lg-8 col-md-8 mt-25 hdr-contact">
                         <div class="support-button float-right d-none d-md-block">
                             <div class="support float-left">
                                 <div class="icon support-icon">
@@ -183,11 +186,11 @@
                             </div>
                             <ul>
                                 <li><a href="{% url 'homepage' %}"><i class="fa fa-angle-right"></i>Bosh sahifa</a></li>
-                                <li><a href="{% url 'haqida' %}"><i class="fa fa-angle-right"></i>Biz haqimizda</a></li>
                                 <li><a href="{% url 'yunalishlar' %}"><i class="fa fa-angle-right"></i>Yo'nalishlar</a></li>
                                 <li><a href="{% url 'yangiliklar' %}"><i class="fa fa-angle-right"></i>Yangiliklar</a></li>
                             </ul>
                             <ul>
+                                <li><a href="{% url 'haqida' %}"><i class="fa fa-angle-right"></i>Biz haqimizda</a></li>
                                 <li><a href="{% url 'tarix' %}"><i class="fa fa-angle-right"></i>Tarix</a></li>
                                 <li><a href="{% url 'rahbariyat' %}"><i class="fa fa-angle-right"></i>Rahbariyat</a></li>
                             </ul>
