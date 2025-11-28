@@ -1,5 +1,6 @@
 from django.views.generic import ListView, DetailView, TemplateView
 from django.views import View
+from django.core.paginator import Paginator
 
 from .models import Elonlar, Yangiliklar
 
@@ -9,10 +10,9 @@ class HomepageView(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        context['elonlar'] = Elonlar.objects.order_by("-date")[:5]
-        context['yangiliklar'] = Yangiliklar.objects.order_by("-date")[:5]
+        context['elonlar'] = Elonlar.objects.order_by("-date")[:3]
+        context['yangiliklar'] = Yangiliklar.objects.order_by("-date")[:4]
         return context
-    
     
 
 
@@ -23,7 +23,7 @@ class ElonlarView(ListView):
     template_name = 'yangiliklar.html'
     context_object_name = 'objects'
     paginate_by = 2
-    ordering = ['-date']
+    ordering = ['date']
 
 class ElonView(DetailView):
     model = Elonlar
@@ -36,7 +36,7 @@ class YangiliklarView(ListView):
     template_name = 'yangiliklar.html'
     context_object_name = 'objects'
     paginate_by = 2
-    ordering = ['-date']
+    ordering = ['date']
 
 class YangilikView(DetailView):
     model = Yangiliklar
