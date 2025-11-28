@@ -26,7 +26,11 @@ RUN chmod 755 entrypoint.prod.sh
 RUN mkdir -p /app/staticfiles \
     && chmod -R 755 /app/staticfiles
 
+RUN mkdir -p /app/media 
+RUN chmod -R 775 /app/media
+
 RUN chown -R appuser:appuser /app/staticfiles
+RUN chown -R appuser:appuser /app/media
 
 
 USER appuser 

@@ -35,13 +35,15 @@
                <div class="col-lg-8">
 
 
-
+                    {% if objects %}
                     {% for object in page_obj %}
                         
                         <div class="singel-blog mt-30">
-                            <div class="blog-thum">
-                                <img src="{% static 'images/blog/b-1.jpg' %}" alt="Blog">
-                            </div>
+                            {% if object.image %}
+                                <div class="blog-thum">
+                                    <img src="{{ object.image.url }}">
+                                </div>
+                            {% endif %}
                             <div class="blog-cont">
                                 <a href="yangilik.html"><h3>{{ object.title }}</h3></a>
                                 <ul>
@@ -84,7 +86,9 @@
 
                         </ul>
                     </nav>  <!-- courses pagination -->
-
+                    {% else %}
+                    <h1>Ooops... Yangiliklar yo`q!</h1>
+                    {% endif %}
 
 
 

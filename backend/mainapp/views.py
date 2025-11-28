@@ -2,7 +2,7 @@ from django.views.generic import ListView, DetailView, TemplateView
 from django.views import View
 from django.core.paginator import Paginator
 
-from .models import Elonlar, Yangiliklar
+from .models import Elonlar, Yangiliklar, Yunalishlar
 
 
 class HomepageView(TemplateView):
@@ -42,6 +42,15 @@ class YangilikView(DetailView):
     model = Yangiliklar
     template_name = 'yangilik.html'
     context_object_name = 'object'
+
+
+
+class YunalishView(ListView):
+    model = Yunalishlar
+    template_name = 'yonalishlar.html'
+    context_object_name = 'object'
+    paginate_by = 6
+    
 
 
 

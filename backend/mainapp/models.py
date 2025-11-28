@@ -31,4 +31,14 @@ class Yangiliklar(BasePost):
     class Meta:
         verbose_name_plural = 'Yangiliklar'
 
+class Yunalishlar(models.Model):
+    title = models.CharField(max_length=200, null=False, blank=False)
+    qisqa_nom = models.CharField(max_length=15, null=True, blank=True)
+    icon = models.ImageField(upload_to='yunalishlar/icons/', blank=True, null=True)
+    image = models.ImageField(upload_to='yunalishlar/', blank=True, null=True)
 
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = "Yunalishlar"    
