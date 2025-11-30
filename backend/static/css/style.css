@@ -3148,7 +3148,14 @@ p {
 .singel-blog{
     overflow: hidden;
     border-radius: 5px;
+    display: flex;
+    flex-direction: row;
 }
+
+.singel-blog .blog-thum{
+    width: 40%;
+}
+
 .singel-blog .blog-thum img{
     width: 100%;
 }
@@ -3156,6 +3163,7 @@ p {
 .singel-blog .blog-cont{
     padding: 40px 50px;
     background-color: #fff;
+    width: 60%;
 }
 .singel-blog .blog-cont a{
     display: block;
@@ -3185,10 +3193,14 @@ p {
     color: #8a8a8a;
 }
 .singel-blog .blog-cont ul li a i{
-    color: #ffc600;
+    color: #1878BE;
     margin-right: 5px;
 }
-.singel-blog .blog-cont p{}
+.singel-blog .blog-cont p{
+    height: 105px; 
+    overflow: hidden; 
+    text-align: left;
+}
 
 
 .saidbar{}

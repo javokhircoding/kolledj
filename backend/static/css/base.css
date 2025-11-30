@@ -17,13 +17,6 @@ footer .cont{
     margin-top: -26px;
 }
 
-.h-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
 .hamkor-temp{
     width: 48%;
     display: flex;
@@ -87,13 +80,22 @@ footer .cont{
         align-items: center;
         text-align: center;
     }
+
+    .h-container{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 770px) {
     .hamkor-temp{
         width: 100%;
     }
-    .h-row{
+
+    .singel-blog{
         flex-direction: column;
     }
 }
