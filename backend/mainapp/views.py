@@ -59,13 +59,10 @@ class YunalishView(ListView):
 
 ############ Qo`shimcha
 class TarixView(TemplateView):
-    template_name = 'tarix.html'
+    template_name = 'haqida.html'
 
 class RaxbariyatView(TemplateView):
     template_name = 'rahbariyat.html'
 
 class HamkorlikView(TemplateView):
     template_name = 'hamkorlik.html'
-
-class HaqidaView(TemplateView):
-    template_name = 'haqida.html'

@@ -125,10 +125,10 @@
         </div> <!-- header logo support -->
         
         <div class="navigation">
-            <div class="container">
+            <div class="container" style="max-width: 1260px; margin-left: auto;">
                 <div class="row">
                     <div class="col-lg-10 col-md-10 col-sm-9 col-8">
-                        <nav class="navbar navbar-expand-lg">
+                        <nav class="navbar navbar-expand-lg" style="left: 28px;">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -136,7 +136,7 @@
                             </button>
 
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul class="navbar-nav mr-auto">
+                                <ul class="navbar-nav mr-auto" style="display: -webkit-box;">
                                     <li class="nav-item">
                                         <a {% if request.resolver_match.url_name == "homepage" %}class="active"{% endif %} href="{% url 'homepage' %}">{% trans "Bosh Sahifa" %}</a>
                                     </li>
@@ -147,10 +147,10 @@
                                         <a {% if request.resolver_match.url_name == "yangiliklar" %}class="active"{% endif %} href="{% url 'yangiliklar' %}">{% trans "Yangiliklar" %}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a {% if request.resolver_match.url_name == "tarix" %}class="active"{% endif %} href="{% url 'tarix' %}">{% trans "Tarix" %}</a>
+                                        <a {% if request.resolver_match.url_name == "yunalishlar" %}class="active"{% endif %} href="{% url 'yunalishlar' %}">{% trans "Yo'nalishlar" %}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a {% if request.resolver_match.url_name == "yunalishlar" %}class="active"{% endif %} href="{% url 'yunalishlar' %}">{% trans "Yo'nalishlar" %}</a>
+                                        <a {% if request.resolver_match.url_name == "tarix" %}class="active"{% endif %} href="{% url 'tarix' %}">{% trans "Biz haqimizda" %}</a>
                                     </li>
                                     <li class="nav-item">
                                         <a {% if request.resolver_match.url_name == "rahbariyat" %}class="active"{% endif %} href="{% url 'rahbariyat' %}">{% trans "Raxbariyat" %}</a>
@@ -218,8 +218,7 @@
                                 <li><a href="{% url 'yangiliklar' %}"><i class="fa fa-angle-right"></i>{% trans "Yangiliklar" %}</a></li>
                             </ul>
                             <ul>
-                                <li><a href="{% url 'haqida' %}"><i class="fa fa-angle-right"></i>{% trans "Biz haqimizda" %}</a></li>
-                                <li><a href="{% url 'tarix' %}"><i class="fa fa-angle-right"></i>{% trans "Tarix" %}</a></li>
+                                <li><a href="{% url 'tarix' %}"><i class="fa fa-angle-right"></i>{% trans "Biz haqimizda" %}</a></li>
                                 <li><a href="{% url 'rahbariyat' %}"><i class="fa fa-angle-right"></i>{% trans "Rahbariyat" %}</a></li>
                             </ul>
                         </div> <!-- footer link -->

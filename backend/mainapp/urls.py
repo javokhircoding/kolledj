@@ -13,6 +13,4 @@ urlpatterns = [
     path('yo`nalishlar/', YunalishView.as_view(), name='yunalishlar'),
     path('rahbariyat/', RaxbariyatView.as_view(), name='rahbariyat'),
     path('hamkorlik/', HamkorlikView.as_view(), name='hamkorlik'),
-    path('haqida/', HaqidaView.as_view(), name='haqida'),
-
 ]

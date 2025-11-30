@@ -478,7 +478,7 @@ p {
 
 .navigation .navbar .navbar-nav{}
 .navigation .navbar .navbar-nav li{
-    margin-right: 40px;
+    margin-right: 35px;
     position: relative;
 }
 .navigation .navbar .navbar-nav li:last-child{

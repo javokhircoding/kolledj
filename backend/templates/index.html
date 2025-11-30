@@ -17,7 +17,7 @@
                             <h1 data-animation="bounceInLeft" data-delay="1s">{% trans "Ta'lim uchun to'g'ri mavzuni tanlang" %}</h1>
                             <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
                             <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'haqida' %}">{% trans "Batafsil" %}</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'tarix' %}">{% trans "Batafsil" %}</a></li>
                                 <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">{% trans "Boshlash" %}</a></li>
                             </ul>
                         </div>
@@ -34,7 +34,7 @@
                             <h1 data-animation="bounceInLeft" data-delay="1s">{% trans "Ta'lim uchun to'g'ri mavzuni tanlang" %}</h1>
                             <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
                             <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'haqida' %}">{% trans "Batafsil" %}</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'tarix' %}">{% trans "Batafsil" %}</a></li>
                                 <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">{% trans "Boshlash" %}</a></li>
                             </ul>
                         </div>
@@ -51,7 +51,7 @@
                             <h1 data-animation="bounceInLeft" data-delay="1s">{% trans "Ta'lim uchun to'g'ri mavzuni tanlang" %}</h1>
                             <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
                             <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'haqida' %}">{% trans "Batafsil" %}</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'tarix' %}">{% trans "Batafsil" %}</a></li>
                                 <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">{% trans "Boshlash" %}</a></li>
                             </ul>
                         </div>
@@ -198,39 +198,25 @@
                             Texnikumda zamonaviy ta’lim usullari, malakali ustozlar, dual o‘qish imkoniyati va keng hamkorlik tarmog‘i mavjud. 
                             Biz bilan birga kelajagingizni ishonch bilan qurishingiz mumkin.
                         </p>
-                        <a href="{% url 'haqida' %}" class="main-btn mt-55">{% trans "Ko'proq" %}</a>
+                        <a href="{% url 'tarix' %}" class="main-btn mt-55">{% trans "Ko'proq" %}</a>
                     </div>
                 </div> <!-- about cont -->
                 <div class="col-lg-6 offset-lg-1">
                     <div class="about-event mt-50">
                         <div class="event-title">
-                            <h3>{% trans "E'lonlar" %}</h3>
+                            <a href="{% url 'elonlar' %}"><h3>{% trans "Elonlar" %}</h3></a>
                         </div>
                         <ul>  <!--ELONLAR-->
+                            {% for elon in elonlar %}
                             <li>
                                 <div class="singel-event">
-                                    <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                    <a href="./yangilik.html"><h4>Elon - 1</h4></a>
-                                    <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                    <span><i class="fa fa-map-marker"></i>Do'stlik 2-mavzesi, 4-uy</span>
+                                    <span><i class="fa fa-calendar"></i> {{ elon.date }}</span>
+                                    <a href="{% url 'elon' elon.slug %}"><h4>{{ elon.title }}</h4></a>
+                                    <span><a href="{% url 'elon' elon.slug %}"> {% trans "Ko'proq" %}</a></span>
                                 </div>
                             </li>
-                            <li>
-                                <div class="singel-event">
-                                    <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                    <a href="./yangilik.html"><h4>Elon 2</h4></a>
-                                    <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                    <span><i class="fa fa-map-marker"></i> Do'stlik 2-mavzesi, 4-uy</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="singel-event">
-                                    <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                    <a href="./yangilik.html"><h4>Elon 3</h4></a>
-                                    <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                    <span><i class="fa fa-map-marker"></i> Do'stlik 2-mavzesi, 4-uy</span>
-                                </div>
-                            </li>
+                            {% endfor %}
+
                         </ul> 
                     </div>
                 </div>
@@ -249,23 +235,45 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-title pb-50">
-                        <h2>{% trans "Yangiliklar" %}</h2>
+                        <a href="{% url 'yangiliklar' %}"><h2>{% trans "Yangiliklar" %}</h2></a>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
             <div class="row">
+
                 <div class="col-lg-6">
                     <div class="singel-news mt-30">
                         <div class="news-thum pb-25">
-                            <img src="{% static 'images/news/n-1.jpg' %}" alt="News">
+                            <img src="{{ yangiliklar.0.image.url}}" alt="News">
                         </div>
                         <div class="news-cont">
                             <ul>
-                                <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
+                                <li><a href="{% url 'yangilik' yangiliklar.0.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.0.date }} </a></li>
                             </ul>
-                            <a href="./yangilik.html"><h3>yangilik</h3></a>
-                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt .</p>
+                            <a href="{% url 'yangilik' yangiliklar.0.slug %}"><h3>{{ yangiliklar.0.title }}</h3></a>
+                            <p>{{ yangiliklar.0.description }}</p>
                         </div>
+                    </div> <!-- singel news -->
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="singel-news news-list">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="news-thum mt-30">
+                                    <img src="{{ yangiliklar.1.image.url }}" alt="News">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="news-cont mt-30">
+                                    <ul>
+                                        <li><a href="{% url 'yangilik' yangiliklar.1.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.1.date }} </a></li>
+                                    </ul>
+                                    <a href="{% url 'yangilik' yangiliklar.1.slug %}"><h3>{{ yangiliklar.1.title }}</h3></a>
+                                    <p>{{ yangiliklar.1.description }}</p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
                     </div> <!-- singel news -->
                 </div>
                 <div class="col-lg-6">
@@ -273,57 +281,42 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="news-thum mt-30">
-                                    <img src="{% static 'images/news/ns-1.jpg' %}" alt="News">
+                                    <img src="{{ yangiliklar.2.image.url }}" alt="News">
                                 </div>
                             </div>
                             <div class="col-sm-8">
                                 <div class="news-cont mt-30">
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
+                                        <li><a href="{% url 'yangilik' yangiliklar.2.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.2.date }} </a></li>
                                     </ul>
-                                    <a href="./yangilik.html"><h3>yangilik</h3></a>
-                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons  vel.</p>
-                                </div>
-                            </div>
-                        </div> <!-- row -->
-                    </div> <!-- singel news -->
-                    <div class="singel-news news-list">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="news-thum mt-30">
-                                    <img src="{% static 'images/news/ns-2.jpg' %}" alt="News">
-                                </div>
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="news-cont mt-30">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                    </ul>
-                                    <a href="./yangilik.html"><h3>yangilik</h3></a>
-                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons  vel.</p>
-                                </div>
-                            </div>
-                        </div> <!-- row -->
-                    </div> <!-- singel news -->
-                    <div class="singel-news news-list">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="news-thum mt-30">
-                                    <img src="{% static 'images/news/ns-3.jpg' %}" alt="News">
-                                </div>
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="news-cont mt-30">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                    </ul>
-                                    <a href="./yangilik.html"><h3>yangilik</h3></a>
-                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons  vel.</p>
+                                    <a href="{% url 'yangilik' yangiliklar.2.slug %}"><h3>{{ yangiliklar.2.title }}</h3></a>
+                                    <p>{{ yangiliklar.2.description }}</p>
                                 </div>
                             </div>
                         </div> <!-- row -->
                     </div> <!-- singel news -->
                 </div>
+                <div class="col-lg-6">
+                    <div class="singel-news news-list">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="news-thum mt-30">
+                                    <img src="{{ yangiliklar.3.image.url }}" alt="News">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="news-cont mt-30">
+                                    <ul>
+                                        <li><a href="{% url 'yangilik' yangiliklar.3.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.3.date }} </a></li>
+                                    </ul>
+                                    <a href="{% url 'yangilik' yangiliklar.3.slug %}"><h3>{{ yangiliklar.3.title }}</h3></a>
+                                    <p>{{ yangiliklar.3.description }}</p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- singel news -->
+                </div>
+
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
