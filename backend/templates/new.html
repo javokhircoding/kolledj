@@ -43,7 +43,7 @@
 
 {% for image in object.gallery.all %}
   <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
+  <div class="mySlides">
     <div class="numbertext">{{ forloop.counter }} / {{ object.gallery.all|length }}</div>
     <img src="{{ image.image.url }}" style="width:100%">
     <div class="text">{{ image.caption|default:object.title }}</div>
@@ -63,7 +63,7 @@
     {% endfor %}
 </div> 
 {% else %}
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="{{ image.image.url }}" style="width:100%" alt="Featured Image">
   </div>
 {% endif %}
