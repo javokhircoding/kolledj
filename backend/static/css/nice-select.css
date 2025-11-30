@@ -1,9 +1,10 @@
 .nice-select {
   -webkit-tap-highlight-color: transparent;
-  background-color: #0204E7;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   border-radius: 5px;
-  /* border: solid 1px #e8e8e8; */
+  border-top: solid 1px #0204E7;
+  border-bottom: solid 1px #0204E7;
   box-sizing: border-box;
   clear: both;
   cursor: pointer;
@@ -124,7 +125,9 @@
     text-align: left;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
-    width: 170px; }
+    width: 170px; 
+    background-color: #fff;
+    border-bottom: 1px solid ;}
     .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
       background-color: #f6f6f6; }
     .nice-select .option.selected {
