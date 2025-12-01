@@ -241,85 +241,123 @@
                 </div>
             </div> <!-- row -->
 
-            
+<div class="row">
+    
+    <div class="col-lg-6">
+        <div class="singel-news mt-30">
+            {% if yangiliklar.0.image %}
+                <div class="news-thum pb-25">
+                    <img src="{{ yangiliklar.0.image.url}}" alt="News">
+                </div>
+            {% endif %}
+            <div class="news-cont">
+                <ul>
+                    {% if yangiliklar.0.slug %}
+                        <li><a href="{% url 'yangilik' yangiliklar.0.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.0.date }} </a></li>
+                    {% endif %}
+                </ul>
+                {% if yangiliklar.0.slug %}
+                    <a href="{% url 'yangilik' yangiliklar.0.slug %}"><h3>{{ yangiliklar.0.title }}</h3></a>
+                {% else %}
+                    <h3>{{ yangiliklar.0.title }}</h3>
+                {% endif %}
+                <p>{{ yangiliklar.0.description|truncatechars:250 }}</p>
+            </div>
+        </div> <!-- singel news -->
+    </div>
+
+    <div class="col-lg-6">
+        
+        {% if yangiliklar|length > 1 %}
+        <div class="singel-news news-list mt-30">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="singel-news mt-30">
-                        <div class="news-thum pb-25">
-                            <img src="{{ yangiliklar.0.image.url}}" alt="News">
+                <div class="col-sm-4">
+                    {% if yangiliklar.1.image %}
+                        <div class="news-thum">
+                            <img src="{{ yangiliklar.1.image.url }}" alt="News">
                         </div>
-                        <div class="news-cont">
-                            <ul>
-                                <li><a href="{% url 'yangilik' yangiliklar.0.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.0.date }} </a></li>
-                            </ul>
-                            <a href="{% url 'yangilik' yangiliklar.0.slug %}"><h3>{{ yangiliklar.0.title }}</h3></a>
-                            <p>{{ yangiliklar.0.description|truncatechars:250 }}</p>
-                        </div>
-                    </div> <!-- singel news -->
+                    {% endif %}
                 </div>
-
-                <div class="col-lg-6">
-                    <div class="singel-news news-list">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="news-thum mt-30">
-                                    <img src="{{ yangiliklar.1.image.url }}" alt="News">
-                                </div>
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="news-cont mt-30">
-                                    <ul>
-                                        <li><a href="{% url 'yangilik' yangiliklar.1.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.1.date }} </a></li>
-                                    </ul>
-                                    <a href="{% url 'yangilik' yangiliklar.1.slug %}"><h3>{{ yangiliklar.1.title }}</h3></a>
-                                    <p>{{ yangiliklar.1.description|truncatechars:90 }}</p>
-                                </div>
-                            </div>
-                        </div> <!-- row -->
-                    </div> <!-- singel news -->
+                <div class="col-sm-8">
+                    <div class="news-cont">
+                        <ul>
+                            {% if yangiliklar.1.slug %}
+                            <li><a href="{% url 'yangilik' yangiliklar.1.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.1.date }} </a></li>
+                            {% endif %}
+                        </ul>
+                        {% if yangiliklar.1.slug %}
+                        <a href="{% url 'yangilik' yangiliklar.1.slug %}"><h3>{{ yangiliklar.1.title }}</h3></a>
+                        {% else %}
+                        <h3>{{ yangiliklar.1.title }}</h3>
+                        {% endif %}
+                        <p>{{ yangiliklar.1.description|truncatechars:90 }}</p>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="singel-news news-list">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="news-thum mt-30">
-                                    <img src="{{ yangiliklar.2.image.url }}" alt="News">
-                                </div>
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="news-cont mt-30">
-                                    <ul>
-                                        <li><a href="{% url 'yangilik' yangiliklar.2.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.2.date }} </a></li>
-                                    </ul>
-                                    <a href="{% url 'yangilik' yangiliklar.2.slug %}"><h3>{{ yangiliklar.2.title }}</h3></a>
-                                    <p>{{ yangiliklar.2.description|truncatechars:90 }}</p>
-                                </div>
-                            </div>
-                        </div> <!-- row -->
-                    </div> <!-- singel news -->
-                </div>
-                <div class="col-lg-6">
-                    <div class="singel-news news-list">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="news-thum mt-30">
-                                    <img src="{{ yangiliklar.3.image.url }}" alt="News">
-                                </div>
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="news-cont mt-30">
-                                    <ul>
-                                        <li><a href="{% url 'yangilik' yangiliklar.3.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.3.date }} </a></li>
-                                    </ul>
-                                    <a href="{% url 'yangilik' yangiliklar.3.slug %}"><h3>{{ yangiliklar.3.title }}</h3></a>
-                                    <p>{{ yangiliklar.3.description|truncatechars:90 }}</p>
-                                </div>
-                            </div>
-                        </div> <!-- row -->
-                    </div> <!-- singel news -->
-                </div>
-
             </div> <!-- row -->
+        </div> <!-- singel news -->
+        {% endif %}
+        
+        {% if yangiliklar|length > 2 %}
+        <div class="singel-news news-list mt-30">
+            <div class="row">
+                <div class="col-sm-4">
+                    {% if yangiliklar.2.image %}
+                        <div class="news-thum">
+                            <img src="{{ yangiliklar.2.image.url }}" alt="News">
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col-sm-8">
+                    <div class="news-cont">
+                        <ul>
+                            {% if yangiliklar.2.slug %}
+                            <li><a href="{% url 'yangilik' yangiliklar.2.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.2.date }} </a></li>
+                            {% endif %}
+                        </ul>
+                        {% if yangiliklar.2.slug %}
+                        <a href="{% url 'yangilik' yangiliklar.2.slug %}"><h3>{{ yangiliklar.2.title }}</h3></a>
+                        {% else %}
+                        <h3>{{ yangiliklar.2.title }}</h3>
+                        {% endif %}
+                        <p>{{ yangiliklar.2.description|truncatechars:90 }}</p>
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- singel news -->
+        {% endif %}
+
+        {% if yangiliklar|length > 3 %}
+        <div class="singel-news news-list mt-30">
+            <div class="row">
+                <div class="col-sm-4">
+                    {% if yangiliklar.3.image %}
+                        <div class="news-thum">
+                            <img src="{{ yangiliklar.3.image.url }}" alt="News">
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col-sm-8">
+                    <div class="news-cont">
+                        <ul>
+                            {% if yangiliklar.3.slug %}
+                            <li><a href="{% url 'yangilik' yangiliklar.3.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.3.date }} </a></li>
+                            {% endif %}
+                        </ul>
+                        {% if yangiliklar.3.slug %}
+                        <a href="{% url 'yangilik' yangiliklar.3.slug %}"><h3>{{ yangiliklar.3.title }}</h3></a>
+                        {% else %}
+                        <h3>{{ yangiliklar.3.title }}</h3>
+                        {% endif %}
+                        <p>{{ yangiliklar.3.description|truncatechars:90 }}</p>
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- singel news -->
+        {% endif %}
+    </div> 
+    
+</div> <!-- end row -->
+            
         </div> <!-- container -->
     </section>
     {% endif %}

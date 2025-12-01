@@ -1606,60 +1606,78 @@ p {
     12. NEWS css 
 ======================================================*/
 
-.singel-news{}
-.singel-news .news-thum{}
-.singel-news .news-thum img{
+/*
+    -------------------------------------------
+    IMAGE FRAMING AND SIZING FIX (NEW RULES)
+    -------------------------------------------
+*/
+
+/* 1. Global Image Sizing (Used by the large post: yangiliklar.0) */
+/* Targets the image in the large featured post */
+.singel-news .news-thum {
+    /* Define a fixed frame height for the large image (e.g., 350px high) */
     width: 100%;
-    border-radius: 5px;
+    height: 350px; 
+    overflow: hidden; /* Crucial: Hides parts of the image that extend outside */
+}
 
-    height: 100px;
+/* 2. List Image Sizing (Used by yangiliklar.1, .2, .3, distinguished by the .news-list class) */
+/* Targets the image in the smaller list posts */
+.news-list .news-thum {
+    /* Define a smaller fixed frame height for list images (e.g., 100px high) */
+    width: 100%;
+    height: 100px; 
     overflow: hidden;
+}
+
+/* 3. Common Image Scaling Fix for ALL News Thumbs */
+/* This rule applies to the actual <img> tag within any news-thum */
+.singel-news .news-thum img {
+    /* Existing rule: width: 100%; */
+    
+    /* NEW CRITICAL RULE: Ensures the image covers the frame */
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-.singel-news .news-cont{}
-.singel-news .news-cont ul li{
-    display: inline-block;
-    margin-right: 25px;
-}
-.singel-news .news-cont ul li:last-child{
-    margin-right: 0;
+    object-fit: cover; 
+    
+    /* Your existing styling */
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.singel-news .news-cont ul li a{
-    color: #8a8a8a;
-    font-size: 15px;
+
+/*
+    -------------------------------------------
+    DESCRIPTION TRUNCATION/LAYOUT TWEAKS
+    -------------------------------------------
+*/
+
+/* Adjust margin/padding for list items to ensure they stack neatly */
+.news-list .news-thum {
+    /* Remove padding/margin that might cause alignment issues */
+    margin-top: 0;
+    margin-bottom: 0;
 }
-.singel-news .news-cont ul li a i{
-    color: #ffc600;
-    margin-right: 8px;
-}
-.singel-news .news-cont ul li a span{
-    color: #07294d;
-}
-.singel-news .news-cont a{
-    display: block;
-}
-.singel-news .news-cont a h3{
-    font-size: 24px;
-    color: #000;
+
+.news-list {
+    /* Add padding/margin to separate the three smaller posts */
+    margin-bottom: 20px; 
     padding-bottom: 20px;
-    padding-top: 10px;
-    -webkit-transition: all 0.4s linear;
-    transition: all 0.4s linear;
+    /* Add a subtle line between the list items for separation */
+    border-bottom: 1px solid #eee; 
 }
-.singel-news .news-cont a:hover h3{
-    color: #ffc600;
-}
-
-.news-list .news-cont h3{
-    font-size: 20px;
-}
-.news-list .news-cont ul li a{
-    font-size: 14px;
+/* Remove border from the last item */
+.col-lg-6 > .news-list:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
+/* Ensure content within the list section aligns correctly */
+.news-list .news-cont {
+    /* Adjust margin here if needed, based on your theme */
+    margin-top: 0;
+}
 
 /*=====================================================
     13. FOOTER css 
@@ -2915,10 +2933,15 @@ p {
 }
 
 .singel-event-list .event-thum {
-	width: 38%;
+	/*width: 38%;*/
+    width: 195px;
+    height: 160px;
+    overflow: hidden;
 }
 .singel-event-list .event-thum img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 5px;
 }
 .singel-event-list .event-cont {
@@ -3145,6 +3168,34 @@ p {
 }
 
 .teachers-right .tab-content{}
+
+
+#courses-grid .singel-course .thum .image {
+    width: 100%;
+    height: 240px; 
+    overflow: hidden; 
+    border-radius: 5px 5px 0 0; 
+}
+
+#courses-list .singel-course .thum .image {
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+    border-radius: 5px 0 0 5px; 
+}
+
+#courses-grid .singel-course .thum .image img,
+#courses-list .singel-course .thum .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.4s ease;
+}
+
+#courses-grid .singel-course:hover .thum .image img,
+#courses-list .singel-course:hover .thum .image img {
+    transform: scale(1.05); 
+}
 
 
 /*=====================================================
@@ -3494,7 +3545,7 @@ p {
     border: 0;
 }
 
-/* #shop-list .singel-publication .cont {
+#shop-list .singel-publication .cont {
 	display: block;
     padding-top: 0;
 }
@@ -3518,10 +3569,10 @@ p {
 	padding: 0 20px;
 	font-size: 12px;
 	line-height: 35px;
-} */
+} 
 
 .gray-bg .container{
-    background-color: #fff;
+    background-color: #E9ECEE;
 }
 
 .gray-bg .container .tab-content .tab-pane .justify-content-center h3{
