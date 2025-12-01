@@ -33,9 +33,23 @@ class Yangiliklar(BasePost):
         verbose_name_plural = _('Yangiliklar')
 
 class Yunalishlar(models.Model):
+    NINE = "9-sinf"
+    ELEV = "11-sinf"
+    KURS_CHOICES = {
+        NINE : "9-sinf",
+        ELEV : "11-sinf",
+    }
+
+    SHAKL = {
+        "Kunduzgi" : "Kunduzgi",
+        "Dual" : 'Dual',
+    }
+
     title = models.CharField(_('Title'), max_length=20, null=False, blank=False)
-    description = models.TextField(_('Description'), max_length=100, null=False, blank=False)
+    description = models.TextField(_('Description'), max_length=240, null=False, blank=False)
     image = models.ImageField(upload_to='yunalishlar/', blank=False, null=False)
+    kurs = models.CharField(_('Kurs'), choices=KURS_CHOICES, default={"9-sinf":"9-sinf"}, null=False, blank=False)
+    shakl = models.CharField(_('Shakl'), choices=SHAKL, default={"Kunduzgi" : "Kunduzgi"}, null=False, blank=False)
 
     def __str__(self):
         return self.title

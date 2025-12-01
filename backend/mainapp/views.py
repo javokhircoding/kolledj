@@ -51,8 +51,8 @@ class YangilikView(DetailView):
 class YunalishView(ListView):
     model = Yunalishlar
     context_object_name = 'objects'
-    template_name = 'yonalishlar.html'
-    paginate_by = 2
+    template_name = 'branches.html'
+    
     
 
 

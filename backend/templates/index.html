@@ -3,7 +3,7 @@
 {% load i18n %}
 
 
-{% block title %}Bosh sahifa{% endblock %}
+{% block title %}{% trans "Bosh sahifa" %}{% endblock %}
 
 {% block content %}
     <!--====== SLIDER PART START ======-->
@@ -201,6 +201,7 @@
                         <a href="{% url 'tarix' %}" class="main-btn mt-55">{% trans "Ko'proq" %}</a>
                     </div>
                 </div> <!-- about cont -->
+                {% if elonlar %}
                 <div class="col-lg-6 offset-lg-1">
                     <div class="about-event mt-50">
                         <div class="event-title">
@@ -220,6 +221,7 @@
                         </ul> 
                     </div>
                 </div>
+                {% endif %}
             </div> <!-- row -->
         </div> <!-- container -->
         <div class="about-bg">
@@ -229,6 +231,7 @@
     
     <!--====== ABOUT PART ENDS ======-->
 
+    {% if yangiliklar %}
     <!--====== NEWS PART START  YANGILIKLAR======-->
     <section id="news-part" class="pt-115 pb-110">
         <div class="container">
@@ -240,7 +243,7 @@
                 </div>
             </div> <!-- row -->
 
-            {% if yangiliklar %}
+            
             <div class="row">
                 <div class="col-lg-6">
                     <div class="singel-news mt-30">
@@ -319,9 +322,9 @@
                 </div>
 
             </div> <!-- row -->
-            {% endif %}
         </div> <!-- container -->
     </section>
+    {% endif %}
     
     <!--====== NEWS PART ENDS ======-->
    
