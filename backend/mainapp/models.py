@@ -1,10 +1,15 @@
 from django.db import models
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
+from django.utils import translation
 
 class BasePost(models.Model):
-    title = models.CharField(_('Title'), max_length=200)
+    title = models.CharField(_('Title'), max_length=200, null=False, blank=False)
+    title_ru = models.CharField(_('Title_ru'), max_length=200, null=False, blank=False)
+    title_en = models.CharField(_('Title_en'), max_length=200,  null=False, blank=False)
     description = models.TextField(_('Description'), blank=False, null=False)
+    description_ru = models.TextField(_('Description_ru'), blank=False, null=False)
+    description_en = models.TextField(_('Description_en'), blank=False, null=False)
     date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='uploads/', blank=False, null=False)
     slug = models.SlugField(unique=True, blank=True)
@@ -22,6 +27,31 @@ class BasePost(models.Model):
         return self.title
 
 
+    @property
+    def current_title(self):
+        lang_code = translation.get_language()
+
+        if lang_code == "ru" and self.title_ru:
+            return self.title_ru
+
+        elif lang_code == "en" and self.title_en:
+            return self.title_en
+
+        return self.title
+
+    @property
+    def current_description(self):
+        lang_code = translation.get_language()
+
+        if lang_code == "ru" and self.description_ru:
+            return self.description_ru
+        
+        elif lang_code == "en" and self.description_en:
+            return self.description_en
+        
+        return self.description
+
+
 
 class Elonlar(BasePost):
     class Meta:
@@ -33,11 +63,20 @@ class Yangiliklar(BasePost):
         verbose_name_plural = _('Yangiliklar')
 
 class Yunalishlar(models.Model):
-    NINE = "9-sinf"
-    ELEV = "11-sinf"
-    KURS_CHOICES = {
-        NINE : "9-sinf",
-        ELEV : "11-sinf",
+
+    KURS = {
+        "9-sinf" : "9-sinf",
+        "11-sinf" : "11-sinf",
+    }
+
+    KURS_RU = {
+        "9-х классов" : "9-х классов",
+        "11-х классов" : "11-х классов"
+    }
+
+    KURS_EN = {
+        "9th grade" : "9th grade",
+        "11th grade" : "11th grade",
     }
 
     SHAKL = {
@@ -45,19 +84,84 @@ class Yunalishlar(models.Model):
         "Dual" : 'Dual',
     }
 
+    SHAKL_RU = {
+        "Очную" : "Очную",
+        "Дуальную" : "Дуальную",
+    }
+
+    SHAKL_EN = {
+        "Daytime" : "Daytime",
+        "Dual" : "Dual",
+    }
+
     title = models.CharField(_('Title'), max_length=20, null=False, blank=False)
+    title_ru = models.CharField(_('Title_ru'), max_length=20, null=False, blank=False)
+    title_en = models.CharField(_('Title_en'), max_length=20, null=False, blank=False)
     description = models.TextField(_('Description'), max_length=240, null=False, blank=False)
+    description_ru = models.TextField(_('Description_ru'), max_length=240, null=False, blank=False)
+    description_en = models.TextField(_('Description_en'), max_length=240, null=False, blank=False)
     image = models.ImageField(upload_to='yunalishlar/', blank=False, null=False)
-    kurs = models.CharField(_('Kurs'), choices=KURS_CHOICES, default={"9-sinf":"9-sinf"}, null=False, blank=False)
+    kurs = models.CharField(_('Kurs'), choices=KURS, default={"9-sinf":"9-sinf"}, null=False, blank=False)
+    kurs_ru = models.CharField(_('Kurs'), choices=KURS_RU, default={"9-х классов":"9-х классов"}, null=False, blank=False)
+    kurs_en = models.CharField(_('Kurs'), choices=KURS_EN, default={"9th grade":"9th grade"}, null=False, blank=False)
     shakl = models.CharField(_('Shakl'), choices=SHAKL, default={"Kunduzgi" : "Kunduzgi"}, null=False, blank=False)
+    shakl_ru = models.CharField(_('Shakl'), choices=SHAKL_RU, default={"Очную" : "Очную"}, null=False, blank=False)
+    shakl_en = models.CharField(_('Shakl'), choices=SHAKL_EN, default={"Daytime" : "Daytime"}, null=False, blank=False)
 
     def __str__(self):
         return self.title
 
     class Meta:
-        verbose_name_plural = _("Yunalishlar")   
+        verbose_name_plural = _("Yunalishlar")
+
+    @property
+    def current_title(self):
+        lang_code = translation.get_language()
+
+        if lang_code == "ru" and self.title_ru:
+            return self.title_ru
+
+        elif lang_code == "en" and self.title_en:
+            return self.title_en
+
+        return self.title
+
+    @property
+    def current_description(self):
+        lang_code = translation.get_language()
+
+        if lang_code == "ru" and self.description_ru:
+            return self.description_ru
+        
+        elif lang_code == "en" and self.description_en:
+            return self.description_en
+        
+        return self.description
+
+    @property 
+    def current_course(self):
+        lang_code = translation.get_language()
+
+        if lang_code == "ru" and self.kurs_ru:
+            return self.kurs_ru
+        
+        elif lang_code == "en" and self.kurs_en:
+            return self.kurs_en
+        
+        return self.kurs
 
 
+    @property
+    def current_time(self):
+        lang_code = translation.get_language()
+
+        if lang_code == "ru" and self.shakl_ru:
+            return self.shakl_ru
+        
+        elif lang_code == "en" and self.shakl_en:
+            return self.shakl_en
+
+        return self.shakl
 
 
 

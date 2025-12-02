@@ -105,7 +105,7 @@ msgstr "About us"
 #: templates/base.html:161 templates/branches.html:15
 #: templates/base.html:155 templates/base.html:219 templates/branches.html:6
 msgid "Yo'nalishlar"
-msgstr "Directions"
+msgstr "Branches"
 
 #: templates/base.html:158
 msgid "Raxbariyat"
