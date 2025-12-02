@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -36,6 +37,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
 
     #apps
     'mainapp',
+
     
     #packages
     'corsheaders',
@@ -184,12 +187,12 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800
 
 LANGUAGE_CODE = 'uz'
 
+gettext = lambda s: s
 LANGUAGES = (
-    ('en', _('English')),
-    ('ru', _('Russian')),
-    ('uz', _('Uzbek')),
+    ('uz', gettext('Uzbek')),
+    ('en', gettext('English')),
+    ('ru', gettext('Russian')),
 )
-
 
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale/'),

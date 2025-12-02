@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-29 13:36+0000\n"
+"POT-Creation-Date: 2025-12-02 14:54+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,202 +19,356 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: kolledj/settings.py:186
-msgid "English"
-msgstr ""
 
 #: kolledj/settings.py:187
-msgid "Russian"
-msgstr ""
+msgid "English"
+msgstr "English"
 
 #: kolledj/settings.py:188
+msgid "Russian"
+msgstr "Russian"
+
+#: kolledj/settings.py:189
 msgid "Uzbek"
-msgstr ""
+msgstr "Uzbek"
 
-#: mainapp/models.py:6 mainapp/models.py:36
+#: mainapp/models.py:6 mainapp/models.py:48
 msgid "Title"
-msgstr ""
+msgstr "Заголовок"
 
-#: mainapp/models.py:7 mainapp/models.py:37
+#: mainapp/models.py:7 mainapp/models.py:49
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
-#: mainapp/models.py:28 templates/base.html:137 templates/yangilik.html:23
+#: mainapp/models.py:28 templates/annauncement.html:18
+#: templates/annauncements.html:12 templates/annauncements.html:16
+#: templates/base.html:146 templates/index.html:205
 msgid "Elonlar"
-msgstr ""
+msgstr "Объявления"
 
-#: mainapp/models.py:33 templates/base.html:140 templates/base.html:192
-#: templates/index.html:246 templates/yangilik.html:25
-#: templates/yangiliklar.html:5 templates/yangiliklar.html:16
+#: mainapp/models.py:33 templates/base.html:149 templates/base.html:220
+#: templates/index.html:238 templates/new.html:20 templates/news.html:12
+#: templates/news.html:16
 msgid "Yangiliklar"
-msgstr ""
+msgstr "Новости"
 
-#: mainapp/models.py:45
+#: mainapp/models.py:51
+msgid "Kurs"
+msgstr "Курс"
+
+#: mainapp/models.py:52
+msgid "Shakl"
+msgstr "Форма"
+
+#: templates/base.html:161 templates/branches.html:15
+#: mainapp/models.py:58
 msgid "Yunalishlar"
-msgstr ""
+msgstr "Направления"
 
-#: templates/base.html:76 templates/base.html:215
+#: templates/annauncement.html:17 templates/annauncements.html:15
+#: templates/base.html:218 templates/branches.html:18
+#: templates/hamkorlik.html:20 templates/haqida.html:18 templates/index.html:6
+#: templates/new.html:19 templates/news.html:15 templates/rahbariyat.html:17
+msgid "Bosh sahifa"
+msgstr "Главная страница"
+
+#: templates/annauncement.html:95 templates/new.html:100
+msgid "Ulashish :"
+msgstr "Поделиться :"
+
+#: templates/annauncement.html:115
+msgid "Bizni Telegramda kuzatib boring :"
+msgstr "Следите за нами в Telegram :"
+
+#: templates/base.html:82 templates/base.html:242
 msgid "Do'stlik 2-mavzesi, 4-uy, Toshkent"
-msgstr ""
+msgstr "город Ташкент, Янгихайотский район, м-вДустлик-2."
 
-#: templates/base.html:83
-msgid "Murojaatlar vaqti: 9:00 - 17:00 (Dushanba - Shanba)"
-msgstr ""
-
-#: templates/base.html:101
-msgid "Toshkent Turizm va Madaniy Meros texnikumi"
-msgstr ""
+#: templates/base.html:89
+msgid "Murojaatlar vaqti: 9:00 - 17:00 (Dushanba - Juma)"
+msgstr "Время обращений: 9:00 - 17:00 (Понедельник - Пятница)"
 
 #: templates/base.html:110
+msgid "Toshkent Turizm va Madaniy Meros texnikumi"
+msgstr "Ташкентский техникум туризма и культурного наследия"
+
+#: templates/base.html:119
 msgid "Biz bilan bog'laning:"
-msgstr ""
+msgstr "Свяжитесь с нами:"
 
-#: templates/base.html:134 templates/tarix.html:17
+#: templates/base.html:143
 msgid "Bosh Sahifa"
-msgstr ""
+msgstr "Главная"
 
-#: templates/base.html:143 templates/base.html:196 templates/tarix.html:18
-msgid "Tarix"
-msgstr ""
-
-#: templates/base.html:146 templates/base.html:191
-#: templates/yonalishlar.html:19
-msgid "Yo'nalishlar"
-msgstr ""
-
-#: templates/base.html:149
-msgid "Raxbariyat"
-msgstr ""
-
-#: templates/base.html:152 templates/hamkorlik.html:5
-#: templates/hamkorlik.html:17 templates/hamkorlik.html:21
-#: templates/hamkorlik.html:36 templates/hamkorlik.html:40
-msgid "Hamkorlik"
-msgstr ""
-
-#: templates/base.html:175
-msgid "Toshkent Turizm va Madaniy Meros Texnikumi"
-msgstr ""
-
-#: templates/base.html:190 templates/hamkorlik.html:20 templates/haqida.html:19
-#: templates/rahbariyat.html:17 templates/yangilik.html:20
-#: templates/yangiliklar.html:19 templates/yonalishlar.html:18
-msgid "Bosh sahifa"
-msgstr ""
-
-#: templates/base.html:195 templates/haqida.html:16 templates/haqida.html:20
-#: templates/haqida.html:38 templates/index.html:190
+#: templates/base.html:152 templates/base.html:223 templates/haqida.html:15
+#: templates/haqida.html:19 templates/haqida.html:34 templates/index.html:187
 msgid "Biz haqimizda"
-msgstr ""
+msgstr "О нас"
 
-#: templates/base.html:197 templates/rahbariyat.html:14
+#: templates/base.html:155 templates/base.html:219 templates/branches.html:6
+msgid "Yo'nalishlar"
+msgstr "Направления"
+
+#: templates/base.html:158
+msgid "Raxbariyat"
+msgstr "Руководство"
+
+#: templates/hamkorlik.html:7 templates/hamkorlik.html:17
+#: templates/hamkorlik.html:21
+msgid "Hamkorlik"
+msgstr "Сотрудничество"
+
+#: templates/base.html:203
+msgid "Toshkent Turizm va Madaniy Meros Texnikumi"
+msgstr "Ташкентский техникум туризма и культурного наследия"
+
+#: templates/base.html:215
+msgid "Navigatsiya"
+msgstr "Навигация"
+
+#: templates/base.html:224 templates/rahbariyat.html:14
 #: templates/rahbariyat.html:18
 msgid "Rahbariyat"
-msgstr ""
+msgstr "Руководство"
 
-#: templates/base.html:206
+#: templates/base.html:233
 msgid "Bog'lanish uchun:"
-msgstr ""
+msgstr "Для связи:"
 
-#: templates/hamkorlik.html:41
-msgid "Hamkorlik uchun ma'lumot, text"
-msgstr ""
+#: templates/branches.html:19
+msgid "O'quv yo'nalishlari"
+msgstr "Учебные направления"
+
+#: templates/branches.html:35
+msgid "Bizdagi o'qish yo'nalishlari"
+msgstr "Наши учебные направления"
 
 #: templates/hamkorlik.html:45
-msgid "Hamkorlik uchun ma'lumot qisqa"
-msgstr ""
+msgid "Hamkorlik va xalqaro aloqalar"
+msgstr "Сотрудничество и международные связи"
 
-#: templates/hamkorlik.html:46
-msgid "Hamkorlik uchun ma'lumot"
-msgstr ""
-
-#: templates/haqida.html:39
-msgid "Toshkent Turizm va Madaniy Meros kolleji"
-msgstr ""
-
-#: templates/haqida.html:56
-msgid "Bizni tanlang"
-msgstr ""
-
-#: templates/haqida.html:63
-msgid "Maqsadimiz"
-msgstr ""
-
-#: templates/haqida.html:70
-msgid "Yana qo'shimcha"
-msgstr ""
-
-#: templates/index.html:16 templates/index.html:33 templates/index.html:50
-msgid "Ta'lim uchun to'g'ri mavzuni tanlang"
-msgstr ""
-
-#: templates/index.html:19 templates/index.html:36 templates/index.html:53
-msgid "Batafsil"
-msgstr ""
-
-#: templates/index.html:20 templates/index.html:37 templates/index.html:54
-msgid "Boshlash"
-msgstr ""
-
-#: templates/index.html:73
-msgid "Eng zo'r bilimlar maskani taqdim etadi:"
-msgstr ""
-
-#: templates/index.html:85
-msgid "Turizm"
-msgstr ""
-
-#: templates/index.html:97
-msgid "Moliya"
-msgstr ""
-
-#: templates/index.html:109
-msgid "Oshpazlik"
-msgstr ""
-
-#: templates/index.html:121
-msgid "Kompyuter"
-msgstr ""
-
-#: templates/index.html:133
-msgid "Buxgalteriya"
-msgstr ""
-
-#: templates/index.html:145
-msgid "Sartaroshlik"
-msgstr ""
-
-#: templates/index.html:157
-msgid "Mehmonxona"
-msgstr ""
-
-#: templates/index.html:169
-msgid "Menejment"
-msgstr ""
-
-#: templates/index.html:191
-msgid "Xush kelibsiz!"
-msgstr ""
-
-#: templates/index.html:195
-msgid "Ko'proq"
-msgstr ""
-
-#: templates/index.html:201
-msgid "E'lonlar"
-msgstr ""
-
-#: templates/tarix.html:14
-msgid "Kollej Tarixi"
-msgstr ""
-
-#: templates/tarix.html:38
-msgid "Toshkent Turizm va Madaniy Meros Texnikumi Tarixi"
-msgstr ""
-
-#: templates/tarix.html:45
+#: templates/hamkorlik.html:49
 msgid ""
-" Toshkent turizm va madaniy meros texnikumi dastlab ta’lim muassasasi "
+"\n"
+"      Toshkent turizm va madaniy meros texnikumi mahalliy va xalqaro\n"
+"      hamkorlikka katta ahamiyat beradi. Hamkorlikning asosiy maqsadi —\n"
+"      ta’lim sifatini oshirish, talabalar uchun amaliyot va ish "
+"imkoniyatlarini\n"
+"      kengaytirish, qo‘shma dasturlar va loyihalarni ishlab chiqish hamda\n"
+"      xalqaro tajribani o‘quv jarayoniga joriy etishdan iborat.\n"
+"    "
+msgstr ""
+"\n"
+"      Ташкентский техникум туризма и культурного наследия придает большое значение\n"
+"      местному и международному сотрудничеству. Основная цель сотрудничества —\n"
+"      повышение качества образования, расширение возможностей стажировок и трудоустройства\n"
+"      для студентов, разработка совместных программ и проектов, а также\n"
+"      внедрение международного опыта в учебный процесс.\n"
+"    "
+
+#: templates/hamkorlik.html:59 templates/hamkorlik.html:132
+msgid "Xalqaro ta’lim hamkorlari"
+msgstr "Международные партнеры в сфере образования"
+
+#: templates/hamkorlik.html:61
+msgid "“Ipak yo‘li” Xalqaro Turizm Universiteti (Samarqand)"
+msgstr "Международный университет туризма «Шелковый путь» (Самарканд)"
+
+#: templates/hamkorlik.html:62
+msgid "Sankt-Peterburg sayyohlik va mehmonxona servisi kolleji (Rossiya)"
+msgstr "Санкт-Петербургский колледж туризма и гостиничного сервиса (Россия)"
+
+#: templates/hamkorlik.html:63
+msgid "Jiangxi Fenglin College of Foreign Economy & Trade (Xitoy)"
+msgstr "Jiangxi Fenglin College of Foreign Economy & Trade (Китай)"
+
+#: templates/hamkorlik.html:64
+msgid "Astraxan moliya-iqtisodiyot instituti (Rossiya)"
+msgstr "Астраханский финансово-экономический институт (Россия)"
+
+#: templates/hamkorlik.html:65
+msgid "TISBI kolleji (Tatariston, Rossiya)"
+msgstr "Колледж ТИСБИ (Татарстан, Россия)"
+
+#: templates/hamkorlik.html:66
+msgid ""
+"Neft texnika universiteti qoshidagi Turizm va servis instituti "
+"(Boshqirdiston)"
+msgstr ""
+"Институт туризма и сервиса при Уфимском государственном нефтяном техническом университете "
+"(Башкортостан)"
+
+#: templates/hamkorlik.html:71 templates/hamkorlik.html:133
+msgid "Mahalliy oliy ta’lim muassasalari bilan hamkorlik"
+msgstr "Сотрудничество с местными высшими учебными заведениями"
+
+#: templates/hamkorlik.html:73
+msgid "Toshkent davlat iqtisodiyot universiteti"
+msgstr "Ташкентский государственный экономический университет"
+
+#: templates/hamkorlik.html:74
+msgid "“Alfraganus” universiteti"
+msgstr "Университет «Alfraganus»"
+
+#: templates/hamkorlik.html:75
+msgid "“Ipak yo‘li” Xalqaro Turizm Universiteti"
+msgstr "Международный университет туризма «Шелковый путь»"
+
+#: templates/hamkorlik.html:80 templates/hamkorlik.html:134
+msgid "2+2 qo‘shma dasturi imkoniyati"
+msgstr "Возможность совместной программы 2+2"
+
+#: templates/hamkorlik.html:82
+msgid ""
+"\n"
+"        Texnikum bitiruvchilari suhbat asosida hamkor oliy ta’lim "
+"muassasalarida\n"
+"        o‘qishni 2-kursdan davom ettirish imkoniyatiga ega. Bu tizim "
+"talabalarga\n"
+"        vaqtni tejash, xalqaro ta’lim muhitiga moslashish va kasbiy "
+"rivojlanishni\n"
+"        tezlashtirish imkonini beradi.\n"
+"        "
+msgstr ""
+"\n"
+"        Выпускники техникума имеют возможность продолжить обучение со 2-го курса\n"
+"        в партнерских высших учебных заведениях на основе собеседования. Эта система\n"
+"        позволяет студентам экономить время, адаптироваться к международной образовательной\n"
+"        среде и ускорить профессиональное развитие.\n"
+"        "
+
+#: templates/hamkorlik.html:92 templates/hamkorlik.html:135
+msgid "Amaliy hamkorlar va ishlab chiqarish bazalari"
+msgstr "Практические партнеры и производственные базы"
+
+#: templates/hamkorlik.html:94
+msgid ""
+"\n"
+"        Texnikum Toshkent shahridagi mehmonxonalar, restoranlar, turizm "
+"firmalari\n"
+"        va servis markazlari bilan faol hamkorlik qilib keladi. Talabalar "
+"ushbu\n"
+"        korxonalarda amaliyot o‘tash, real ish tajribasiga ega bo‘lish va "
+"kelajakda\n"
+"        ish bilan ta’minlanish imkoniyatiga ega.\n"
+"        "
+msgstr ""
+"\n"
+"        Техникум активно сотрудничает с гостиницами, ресторанами, туристическими фирмами\n"
+"        и сервисными центрами Ташкента. Студенты имеют возможность проходить практику\n"
+"        на этих предприятиях, получать реальный опыт работы и в будущем\n"
+"        быть трудоустроенными.\n"
+"        "
+
+#: templates/hamkorlik.html:104 templates/hamkorlik.html:136
+msgid "Hamkorlikning asosiy maqsadlari"
+msgstr "Основные цели сотрудничества"
+
+#: templates/hamkorlik.html:106
+msgid "Akademik almashinuv (o‘qituvchi va talabalar uchun)"
+msgstr "Академический обмен (для преподавателей и студентов)"
+
+#: templates/hamkorlik.html:107
+msgid "Qo‘shma innovatsion va ilmiy loyihalarni ishlab chiqish"
+msgstr "Разработка совместных инновационных и научных проектов"
+
+#: templates/hamkorlik.html:108
+msgid "Masofaviy (onlayn) ta’lim dasturlarini yo‘lga qo‘yish"
+msgstr "Запуск дистанционных (онлайн) образовательных программ"
+
+#: templates/hamkorlik.html:109
+msgid "Xalqaro standartlarga mos o‘quv dasturlarini yaratish"
+msgstr "Создание учебных программ, соответствующих международным стандартам"
+
+#: templates/hamkorlik.html:110
+msgid "Ikkinchi mutaxassislik olish imkoniyatlarini kengaytirish"
+msgstr "Расширение возможностей получения второй специальности"
+
+#: templates/hamkorlik.html:130
+msgid "Qisqa linklar"
+msgstr "Быстрые ссылки"
+
+#: templates/hamkorlik.html:139
+msgid "Biz bilan bog'laning :"
+msgstr "Свяжитесь с нами :"
+
+#: templates/hamkorlik.html:158
+msgid "HAMKORLARIMIZ:"
+msgstr "НАШИ ПАРТНЕРЫ:"
+
+#: templates/haqida.html:5 templates/haqida.html:35
+msgid "Toshkent Turizm va Madaniy Meros kolleji"
+msgstr "Ташкентский техникум туризма и культурного наследия"
+
+#: templates/haqida.html:38
+msgid ""
+"Toshkent turizm va madaniy meros texnikumi – 1979-yildan buyon turizm, "
+"mehmondo‘stlik va xizmat ko‘rsatish sohalari uchun yuqori malakali "
+"mutaxassislar tayyorlab kelayotgan nufuzli ta’lim muassasasidir. 46 yillik "
+"tajriba, zamonaviy o‘quv dasturlari, kuchli pedagogik jamoa hamda xalqaro va "
+"mahalliy hamkorlik tarmog‘i orqali minglab yoshlarning kasbiy yo‘lini "
+"belgilab berdi. Texnikum bugun ham raqobatbardosh kadrlar tayyorlash yo‘lida "
+"izchil faoliyat olib bormoqda."
+msgstr ""
+"Ташкентский техникум туризма и культурного наследия – это престижное образовательное учреждение, "
+"которое с 1979 года готовит высококвалифицированных специалистов для сфер туризма, "
+"гостеприимства и услуг. Благодаря 46-летнему опыту, современным учебным программам, "
+"сильному педагогическому коллективу и сети международного и местного сотрудничества, "
+"техникум определил профессиональный путь тысяч молодых людей. Техникум и сегодня "
+"ведет последовательную деятельность по подготовке конкурентоспособных кадров."
+
+#: templates/haqida.html:52
+msgid "Nega aynan biz?"
+msgstr "Почему именно мы?"
+
+#: templates/haqida.html:53
+msgid ""
+"Texnikum 46 yillik tarix, tajribali ustozlar va real amaliyot bazalariga "
+"ega. O‘quvchilar mehmonxona, restoran va turizm korxonalarida tajriba "
+"orttiradi. Dual ta’lim shakli esa o‘qish bilan birga ishlash va maosh olish "
+"imkonini beradi."
+msgstr ""
+"Техникум имеет 46-летнюю историю, опытных преподавателей и реальные базы практики. "
+"Учащиеся получают опыт в гостиницах, ресторанах и туристических предприятиях. "
+"Дуальная форма обучения позволяет учиться, одновременно работать и получать зарплату."
+
+#: templates/haqida.html:59
+msgid "Bizning maqsadimiz"
+msgstr "Наши цели"
+
+#: templates/haqida.html:60
+msgid ""
+"Maqsadimiz — turizm, servis, menejment va IT yo‘nalishlarida bilimli, "
+"mas’uliyatli va zamonaviy mutaxassislarni tayyorlash. Ta’lim jarayoni "
+"xalqaro talablarga mos olib borilib, har bir talabaga individual yondashuv "
+"ta’minlanadi."
+msgstr ""
+"Наша цель — подготовка знающих, ответственных и современных специалистов в сферах "
+"туризма, сервиса, менеджмента и IT. Учебный процесс ведется в соответствии с "
+"международными требованиями, обеспечивается индивидуальный подход к каждому студенту."
+
+#: templates/haqida.html:66
+msgid "Imkoniyatlar"
+msgstr "Возможности"
+
+#: templates/haqida.html:67
+msgid ""
+"Talabalar xalqaro va mahalliy oliygohlar bilan hamkorlikda o‘qishni 2-"
+"kursdan davom ettirish imkoniyatiga ega. Amaliy loyihalar, ishlab chiqarish "
+"amaliyoti va hamkor korxonalarda ish o‘rinlari bilan ta’minlanish — muhim "
+"ustunlik hisoblanadi."
+msgstr ""
+"Студенты имеют возможность продолжить обучение со 2-го курса в сотрудничестве "
+"с международными и местными вузами. Практические проекты, производственная практика "
+"и обеспечение рабочими местами на предприятиях-партнерах являются важным преимуществом."
+
+#: templates/haqida.html:89
+msgid "Toshkent turizm va madaniy meros texnikumining tarixi"
+msgstr "История Ташкентского техникума туризма и культурного наследия"
+
+#: templates/haqida.html:92
+msgid ""
+"Toshkent turizm va madaniy meros texnikumi dastlab ta’lim muassasasi "
 "sifatida 1979-yilda “Toshkent mehmonxona xo‘jaligi texnikumi”  nomi bilan "
 "tashkillashtirilgan. Usha vaqtda mazkur texnikum ushbu ta’lim yo‘nalishdagi "
 "O‘rta Osiyoda yagona ta’lim muassasasi bo‘lgan.\n"
@@ -256,3 +410,183 @@ msgid ""
 "Peterburg Turizm va mehmonxona servisi kolleji”,  8-sonli kasb -hunar "
 "kolleji (Qozog’iston), 13-sonli kasb-hunar kolleji (Qozog’iston)."
 msgstr ""
+"Ташкентский техникум туризма и культурного наследия был первоначально организован "
+"как образовательное учреждение в 1979 году под названием «Ташкентский техникум гостиничного хозяйства». "
+"В то время этот техникум был единственным образовательным учреждением такого профиля в Средней Азии.\n"
+"        Постановлением Кабинета Министров Республики Узбекистан № 473 от 29 октября 2003 года "
+"и приказом Центра среднего специального образования № 16 от 27 января 2004 года "
+"«Ташкентский техникум гостиничного хозяйства» был преобразован в «Ташкентский профессиональный колледж гостиничного хозяйства».\n"
+"        Постановлением Кабинета Министров Республики Узбекистан № 202 от 16 июля 2009 года "
+"и приказом Центра среднего специального образования № 166 от 17 июля 2009 года "
+"«Ташкентский профессиональный колледж гостиничного хозяйства» был переименован в «Ташкентский профессиональный колледж туризма и бизнеса».\n"
+"        Постановлением Президента Республики Узбекистан № 5812 от 6 сентября 2019 года "
+"«Ташкентский профессиональный колледж туризма и бизнеса» был передан в ведение Государственного комитета по развитию туризма "
+"и переименован в «Ташкентский колледж туризма и бизнеса».\n"
+" Указом Президента Республики Узбекистан № 158 от 16 октября 2024 года "
+"Ташкентский колледж туризма и бизнеса получил статус Ташкентского техникума туризма и культурного наследия.\n"
+"        Постановлением Президента Республики Узбекистан № 6199 от 4 июня 2021 года "
+"«Ташкентский колледж туризма и бизнеса» был передан в ведение Международного университета туризма и культурного наследия «Шелковый путь».\n"
+"За время своей образовательной деятельности «Ташкентский колледж туризма и бизнеса» готовил кадры "
+"для различных отраслей народного хозяйства по специальностям «Туризм», «Гостиничное хозяйство», "
+"«Парикмахерское искусство», «Бухгалтерия» и «Общественное питание».\n"
+"     За 45 лет своей деятельности Ташкентский техникум туризма и культурного наследия дал путевку в жизнь "
+"4228 выпускникам по различным специальностям. В настоящее время выпускники нашего техникума "
+"успешно трудятся в сферах услуг, бизнеса и предпринимательства народного хозяйства Республики Узбекистан.\n"
+"     Наш техникум установил партнерские связи с несколькими зарубежными образовательными учреждениями, включая "
+"Башкирский государственный университет, «Институт туризма и сервиса при УГНТУ Башкортостана», "
+"«Астанинский международный институт экономики и финансов», «Jiangxi Fenglin College of Foreign Economy & Trade» (Китай), "
+"«Санкт-Петербургский колледж туризма и гостиничного сервиса», Профессиональный колледж № 8 (Казахстан) и Профессиональный колледж № 13 (Казахстан)."
+
+#: templates/index.html:16 templates/index.html:32 templates/index.html:48
+msgid "Ta'lim uchun to'g'ri manzilni tanlang"
+msgstr "Выберите правильное место для обучения"
+
+#: templates/index.html:17 templates/index.html:49
+msgid ""
+"Turizm, servis va zamonaviy kasblar sohasida mustahkam bilim, amaliy tajriba "
+"va xalqaro imkoniyatlarga ega bo‘ling. Toshkent turizm va madaniy meros "
+"texnikumi — kelajagingizni ishonchli bilim, kuchli tajriba va to‘g‘ri yo‘l "
+"bilan quradigan maskan."
+msgstr ""
+"Получите прочные знания, практический опыт и международные возможности "
+"в сфере туризма, сервиса и современных профессий. Ташкентский техникум туризма и культурного наследия — "
+"это место, где вы строите свое будущее с надежными знаниями, сильным опытом и правильным путем."
+
+#: templates/index.html:19 templates/index.html:35 templates/index.html:51
+msgid "Batafsil"
+msgstr "Подробнее"
+
+#: templates/index.html:33
+msgid ""
+"Zamonaviy yo‘nalishlar, tajribali ustozlar va amaliyotga yo‘naltirilgan "
+"ta’lim — bu sizga mustahkam kasbiy poydevor beradi. To‘g‘ri muassasani "
+"tanlab, kelajagingiz sari ishonch bilan qadam qo‘ying."
+msgstr ""
+"Современные направления, опытные преподаватели и практико-ориентированное обучение — "
+"это даст вам прочный профессиональный фундамент. Выберите правильное учреждение "
+"и уверенно шагайте в свое будущее."
+
+#: templates/index.html:70
+msgid "Eng zo'r bilimlar maskani taqdim etadi:"
+msgstr "Лучшее место знаний предлагает:"
+
+#: templates/index.html:82
+msgid "Turizm"
+msgstr "Туризм"
+
+#: templates/index.html:94
+msgid "Moliya"
+msgstr "Финансы"
+
+#: templates/index.html:106
+msgid "Oshpazlik"
+msgstr "Кулинария"
+
+#: templates/index.html:118
+msgid "Kompyuter"
+msgstr "Компьютер"
+
+#: templates/index.html:130
+msgid "Buxgalteriya"
+msgstr "Бухгалтерия"
+
+#: templates/index.html:142
+msgid "Sartaroshlik"
+msgstr "Парикмахерское дело"
+
+#: templates/index.html:154
+msgid "Mehmonxona"
+msgstr "Гостиничное дело"
+
+#: templates/index.html:166
+msgid "Menejment"
+msgstr "Менеджмент"
+
+#: templates/index.html:188
+msgid "Xush kelibsiz!"
+msgstr "Добро пожаловать!"
+
+#: templates/index.html:191
+msgid ""
+"\n"
+"                            Toshkent turizm va madaniy meros texnikumi — "
+"1979 yildan buyon O‘zbekiston va Markaziy Osiyoda turizm, \n"
+"                            mehmondo‘stlik va xizmat ko‘rsatish sohalari "
+"bo‘yicha yetuk mutaxassislar tayyorlab kelayotgan yetakchi ta’lim "
+"muassasidir. \n"
+"                             Texnikumda zamonaviy ta’lim usullari, malakali "
+"ustozlar, dual o‘qish imkoniyati va keng hamkorlik tarmog‘i mavjud. \n"
+"                            Biz bilan birga kelajagingizni ishonch bilan "
+"qurishingiz mumkin.\n"
+"                            "
+msgstr ""
+"\n"
+"                            Ташкентский техникум туризма и культурного наследия — это ведущее образовательное учреждение,\n"
+"                            которое с 1979 года готовит зрелых специалистов в сферах туризма, гостеприимства и услуг\n"
+"                            в Узбекистане и Центральной Азии.\n"
+"                            В техникуме применяются современные методы обучения, работают квалифицированные преподаватели,\n"
+"                            есть возможность дуального обучения и широкая сеть сотрудничества.\n"
+"                            Вместе с нами вы можете с уверенностью строить свое будущее.\n"
+"                            "
+
+#: templates/index.html:198 templates/index.html:213
+msgid "Ko'proq"
+msgstr "Больше"
+
+#: templates/rahbariyat.html:37 templates/rahbariyat.html:50
+msgid "Direktor"
+msgstr "Директор"
+
+#: templates/rahbariyat.html:38
+msgid "G`anixodjaev Saidazim Amanullaevich"
+msgstr "Ганиходжаев Саидазим Амануллаевич"
+
+#: templates/rahbariyat.html:42
+msgid "– Fan doktori, Ph.D., Xokkaydo Universiteti, Yaponiya."
+msgstr "– Доктор наук, Ph.D., Университет Хоккайдо, Япония."
+
+#: templates/rahbariyat.html:57
+msgid "Haqimda"
+msgstr "Обо мне"
+
+#: templates/rahbariyat.html:58
+msgid ""
+"Ganixodjaev Saidazim Amanullaevich — Toshkent turizm va madaniy meros "
+"texnikumi direktori, fan doktori (PhD), Yaponiya Xokkaydo Universiteti "
+"bitiruvchisi. Ta’limda innovatsiyalar, xalqaro aloqalarni kengaytirish va "
+"zamonaviy kadrlar tayyorlash bo‘yicha katta tajribaga ega."
+msgstr ""
+"Ганиходжаев Саидазим Амануллаевич — директор Ташкентского техникума туризма и культурного наследия, "
+"доктор наук (PhD), выпускник Университета Хоккайдо, Япония. Имеет большой опыт "
+"во внедрении инноваций в образование, расширении международных связей и подготовке современных кадров."
+
+#: templates/rahbariyat.html:61
+msgid "Yutuqlar"
+msgstr "Достижения"
+
+#: templates/rahbariyat.html:62
+msgid ""
+"Direktor rahbarligida texnikum o‘quv dasturlarini modernizatsiya qildi, dual "
+"ta’limni joriy etdi, xalqaro hamkorlikni kengaytirdi va 2024-yilda "
+"texnikumning yangi maqomga ega bo‘lishi jarayonida faol ishtirok etdi. 46 "
+"yil davomida 4228 nafar mutaxassis tayyorlandi."
+msgstr ""
+"Под руководством директора техникум модернизировал учебные программы, внедрил "
+"дуальное обучение, расширил международное сотрудничество и принял активное участие "
+"в процессе получения техникумом нового статуса в 2024 году. За 46 лет было подготовлено "
+"4228 специалистов."
+
+#: templates/rahbariyat.html:65
+msgid "Mening maqsadlarim"
+msgstr "Мои цели"
+
+#: templates/rahbariyat.html:66
+msgid ""
+"Maqsadim — texnikumni mintaqadagi eng ilg‘or amaliy ta’lim markaziga "
+"aylantirish, yoshlarni turizm, servis va iqtisodiyot sohalarida "
+"raqobatbardosh mutaxassis sifatida tarbiyalash, xalqaro standartlarga mos "
+"o‘qitish va O‘zbekistonning turizm salohiyatiga hissa qo‘shish."
+msgstr ""
+"Моя цель — превратить техникум в самый передовой центр практического образования в регионе, "
+"воспитать молодежь как конкурентоспособных специалистов в сферах туризма, сервиса и экономики, "
+"обучать в соответствии с международными стандартами и вносить вклад в туристический потенциал Узбекистана."
