@@ -3210,6 +3210,7 @@ p {
     width: 100%;
 }
 
+
 .singel-blog .blog-cont{
     padding: 40px 50px;
     background-color: #fff;
@@ -3620,6 +3621,17 @@ p {
 	color: #1d2025;
 	margin: 0px;
 }
+
+.gray-bg .blog-details .thum{
+    background-color: white;
+    margin-bottom: -50px;
+}
+
+.gray-bg .blog-details .thum img{
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
 
 /* .gray-bg .container .tab-content .tab-pane .justify-content-center .hist-container img{
     width: 600px;
@@ -4057,4 +4069,30 @@ p.form-message.error {
     .singel-publication .image img {
         border-radius: 15px 15px 0 0; /* Round top corners on mobile */
     }
+}
+
+
+/* =========================================
+   CRITICAL FIX: FORCE ROW WRAPPING
+   This prevents columns from flowing right indefinitely
+   ========================================= */
+
+/* Target the main containers that hold the rows of posts */
+#courses-grid .row, /* Yangiliklar - Grid View */
+#courses-list .row, /* Yangiliklar - List View */
+#event-page .row,   /* Elonlar */
+#shop-list .row     /* Yo'nalishlar */
+{
+    /* This rule explicitly tells the browser to wrap items onto a new line
+       when they exceed the container width. This overrides any 'nowrap' 
+       that may have been inherited from a base theme style. */
+    flex-wrap: wrap !important;
+}
+
+/* Also ensure the container holding the singular column elements is standard flex */
+#event-page, 
+#courses-part, 
+#shop-page {
+    /* Ensure no parent container is aggressively overriding global flex settings */
+    display: block !important; 
 }
