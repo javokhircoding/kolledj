@@ -208,8 +208,8 @@
                             {% for elon in elonlar %}
                             <li>
                                 <div class="singel-event">
-                                    <span><i class="fa fa-calendar"></i> {{ elon.date }}</span>
-                                    <a href="{% url 'elon' elon.slug %}"><h4>{{ elon.title }}</h4></a>
+                                    <span><i class="fa fa-calendar"></i>  {{ elon.date }}</span>
+                                    <a href="{% url 'elon' elon.slug %}"><h4>{{ elon.title|truncatechars:100 }}</h4></a>
                                     <span><a href="{% url 'elon' elon.slug %}"> {% trans "Ko'proq" %}</a></span>
                                 </div>
                             </li>
@@ -256,7 +256,7 @@
                     {% endif %}
                 </ul>
                 {% if yangiliklar.0.slug %}
-                    <a href="{% url 'yangilik' yangiliklar.0.slug %}"><h3>{{ yangiliklar.0.title }}</h3></a>
+                    <a href="{% url 'yangilik' yangiliklar.0.slug %}"><h3>{{ yangiliklar.0.title|truncatechars:100 }}</h3></a>
                 {% else %}
                     <h3>{{ yangiliklar.0.title }}</h3>
                 {% endif %}
@@ -285,11 +285,11 @@
                             {% endif %}
                         </ul>
                         {% if yangiliklar.1.slug %}
-                        <a href="{% url 'yangilik' yangiliklar.1.slug %}"><h3>{{ yangiliklar.1.title }}</h3></a>
+                        <a href="{% url 'yangilik' yangiliklar.1.slug %}"><h3>{{ yangiliklar.1.title|truncatechars:50 }}</h3></a>
                         {% else %}
                         <h3>{{ yangiliklar.1.title }}</h3>
                         {% endif %}
-                        <p>{{ yangiliklar.1.description|truncatechars:90 }}</p>
+                        <p>{{ yangiliklar.1.description|truncatechars:100 }}</p>
                     </div>
                 </div>
             </div> <!-- row -->
@@ -314,11 +314,11 @@
                             {% endif %}
                         </ul>
                         {% if yangiliklar.2.slug %}
-                        <a href="{% url 'yangilik' yangiliklar.2.slug %}"><h3>{{ yangiliklar.2.title }}</h3></a>
+                        <a href="{% url 'yangilik' yangiliklar.2.slug %}"><h3>{{ yangiliklar.2.title|truncatechars:50 }}</h3></a>
                         {% else %}
                         <h3>{{ yangiliklar.2.title }}</h3>
                         {% endif %}
-                        <p>{{ yangiliklar.2.description|truncatechars:90 }}</p>
+                        <p>{{ yangiliklar.2.description|truncatechars:100 }}</p>
                     </div>
                 </div>
             </div> <!-- row -->
@@ -343,11 +343,11 @@
                             {% endif %}
                         </ul>
                         {% if yangiliklar.3.slug %}
-                        <a href="{% url 'yangilik' yangiliklar.3.slug %}"><h3>{{ yangiliklar.3.title }}</h3></a>
+                        <a href="{% url 'yangilik' yangiliklar.3.slug %}"><h3>{{ yangiliklar.3.title|truncatechars:50 }}</h3></a>
                         {% else %}
                         <h3>{{ yangiliklar.3.title }}</h3>
                         {% endif %}
-                        <p>{{ yangiliklar.3.description|truncatechars:90 }}</p>
+                        <p>{{ yangiliklar.3.description|truncatechars:100 }}</p>
                     </div>
                 </div>
             </div> <!-- row -->
