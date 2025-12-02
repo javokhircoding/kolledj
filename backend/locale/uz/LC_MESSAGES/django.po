@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-02 13:36+0500\n"
+"POT-Creation-Date: 2025-12-02 14:54+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
 #: kolledj/settings.py:187
 msgid "English"
 msgstr ""
@@ -96,13 +97,13 @@ msgstr ""
 msgid "Bosh Sahifa"
 msgstr ""
 
-#: templates/base.html:152 templates/base.html:219 templates/branches.html:6
-msgid "Yo'nalishlar"
-msgstr ""
-
-#: templates/base.html:155 templates/base.html:223 templates/haqida.html:15
+#: templates/base.html:152 templates/base.html:223 templates/haqida.html:15
 #: templates/haqida.html:19 templates/haqida.html:34 templates/index.html:187
 msgid "Biz haqimizda"
+msgstr ""
+
+#: templates/base.html:155 templates/base.html:219 templates/branches.html:6
+msgid "Yo'nalishlar"
 msgstr ""
 
 #: templates/base.html:158
@@ -372,8 +373,8 @@ msgid ""
 "kolleji (Qozog’iston), 13-sonli kasb-hunar kolleji (Qozog’iston)."
 msgstr ""
 
-#: templates/index.html:16
-msgid "Ta'lim uchun to'g'ri joyni tanlang"
+#: templates/index.html:16 templates/index.html:32 templates/index.html:48
+msgid "Ta'lim uchun to'g'ri manzilni tanlang"
 msgstr ""
 
 #: templates/index.html:17 templates/index.html:49
@@ -386,10 +387,6 @@ msgstr ""
 
 #: templates/index.html:19 templates/index.html:35 templates/index.html:51
 msgid "Batafsil"
-msgstr ""
-
-#: templates/index.html:32 templates/index.html:48
-msgid "Ta'lim uchun to'g'ri mavzuni tanlang"
 msgstr ""
 
 #: templates/index.html:33

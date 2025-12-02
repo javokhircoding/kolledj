@@ -149,10 +149,10 @@
                                         <a {% if request.resolver_match.url_name == "yangiliklar" %}class="active"{% endif %} href="{% url 'yangiliklar' %}">{% trans "Yangiliklar" %}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a {% if request.resolver_match.url_name == "yunalishlar" %}class="active"{% endif %} href="{% url 'yunalishlar' %}">{% trans "Yo'nalishlar" %}</a>
+                                        <a {% if request.resolver_match.url_name == "tarix" %}class="active"{% endif %} href="{% url 'tarix' %}">{% trans "Biz haqimizda" %}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a {% if request.resolver_match.url_name == "tarix" %}class="active"{% endif %} href="{% url 'tarix' %}">{% trans "Biz haqimizda" %}</a>
+                                        <a {% if request.resolver_match.url_name == "yunalishlar" %}class="active"{% endif %} href="{% url 'yunalishlar' %}">{% trans "Yo'nalishlar" %}</a>
                                     </li>
                                     <li class="nav-item">
                                         <a {% if request.resolver_match.url_name == "rahbariyat" %}class="active"{% endif %} href="{% url 'rahbariyat' %}">{% trans "Raxbariyat" %}</a>
