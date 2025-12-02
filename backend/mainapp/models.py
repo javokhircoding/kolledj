@@ -5,11 +5,7 @@ from django.utils import translation
 
 class BasePost(models.Model):
     title = models.CharField(_('Title'), max_length=200, null=False, blank=False)
-    title_ru = models.CharField(_('Title_ru'), max_length=200, null=False, blank=False)
-    title_en = models.CharField(_('Title_en'), max_length=200,  null=False, blank=False)
     description = models.TextField(_('Description'), blank=False, null=False)
-    description_ru = models.TextField(_('Description_ru'), blank=False, null=False)
-    description_en = models.TextField(_('Description_en'), blank=False, null=False)
     date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='uploads/', blank=False, null=False)
     slug = models.SlugField(unique=True, blank=True)
@@ -25,31 +21,6 @@ class BasePost(models.Model):
 
     def __str__(self):
         return self.title
-
-
-    @property
-    def current_title(self):
-        lang_code = translation.get_language()
-
-        if lang_code == "ru" and self.title_ru:
-            return self.title_ru
-
-        elif lang_code == "en" and self.title_en:
-            return self.title_en
-
-        return self.title
-
-    @property
-    def current_description(self):
-        lang_code = translation.get_language()
-
-        if lang_code == "ru" and self.description_ru:
-            return self.description_ru
-        
-        elif lang_code == "en" and self.description_en:
-            return self.description_en
-        
-        return self.description
 
 
 
@@ -95,11 +66,7 @@ class Yunalishlar(models.Model):
     }
 
     title = models.CharField(_('Title'), max_length=20, null=False, blank=False)
-    title_ru = models.CharField(_('Title_ru'), max_length=20, null=False, blank=False)
-    title_en = models.CharField(_('Title_en'), max_length=20, null=False, blank=False)
     description = models.TextField(_('Description'), max_length=240, null=False, blank=False)
-    description_ru = models.TextField(_('Description_ru'), max_length=240, null=False, blank=False)
-    description_en = models.TextField(_('Description_en'), max_length=240, null=False, blank=False)
     image = models.ImageField(upload_to='yunalishlar/', blank=False, null=False)
     kurs = models.CharField(_('Kurs'), choices=KURS, default={"9-sinf":"9-sinf"}, null=False, blank=False)
     kurs_ru = models.CharField(_('Kurs'), choices=KURS_RU, default={"9-х классов":"9-х классов"}, null=False, blank=False)
@@ -114,30 +81,6 @@ class Yunalishlar(models.Model):
     class Meta:
         verbose_name_plural = _("Yunalishlar")
 
-    @property
-    def current_title(self):
-        lang_code = translation.get_language()
-
-        if lang_code == "ru" and self.title_ru:
-            return self.title_ru
-
-        elif lang_code == "en" and self.title_en:
-            return self.title_en
-
-        return self.title
-
-    @property
-    def current_description(self):
-        lang_code = translation.get_language()
-
-        if lang_code == "ru" and self.description_ru:
-            return self.description_ru
-        
-        elif lang_code == "en" and self.description_en:
-            return self.description_en
-        
-        return self.description
-
     @property 
     def current_course(self):
         lang_code = translation.get_language()
@@ -147,8 +90,8 @@ class Yunalishlar(models.Model):
         
         elif lang_code == "en" and self.kurs_en:
             return self.kurs_en
-        
-        return self.kurs
+        else:
+            return self.kurs
 
 
     @property
@@ -160,8 +103,8 @@ class Yunalishlar(models.Model):
         
         elif lang_code == "en" and self.shakl_en:
             return self.shakl_en
-
-        return self.shakl
+        else:
+            return self.shakl
 
 
 
