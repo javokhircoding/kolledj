@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %} 
+
+{% block title %}404 - {% trans "Sahifa topilmadi" %}{% endblock %}
+
+{% block content %}
+
+<style>
+    /* Styling specific to the 404 page */
+    .error-404-section {
+        padding: 100px 0;
+        text-align: center;
+        background: #f8f9fa; /* Light background to contrast with main content */
+    }
+
+    .error-content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .error-code {
+        font-size: 140px;
+        font-weight: 800;
+        color: #07294d; /* Dark blue from your primary design */
+        line-height: 1.2;
+        margin-bottom: 5px;
+        text-shadow: 4px 4px 0 #ffc600; /* Yellow accent shadow */
+    }
+
+    .error-code span {
+        font-size: 70px;
+        display: block;
+        font-weight: 700;
+        color: #ffc600; /* Yellow accent */
+        margin-top: -30px;
+        margin-bottom: 20px;
+    }
+
+    .error-heading {
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .error-text {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .home-btn {
+        display: inline-block;
+        background-color: #07294d;
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+
+    .home-btn:hover {
+        background-color: #ffc600;
+        color: #07294d;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .error-code {
+            font-size: 100px;
+        }
+        .error-code span {
+            font-size: 50px;
+        }
+        .error-heading {
+            font-size: 24px;
+        }
+        .error-content {
+            padding: 20px;
+        }
+    }
+</style>
+
+<section class="error-404-section">
+    <div class="container">
+        <div class="error-content">
+            <h1 class="error-code">
+                404
+                <span>{% trans "Xatolik" %}</span>
+            </h1>
+            <h2 class="error-heading">{% trans "Sahifa topilmadi" %}</h2>
+            <p class="error-text">
+                {% trans "Kechirasiz, siz izlayotgan sahifa o'chirilgan, nomi o'zgartirilgan yoki vaqtinchalik mavjud emas." %}
+            </p>
+            <a href="{% url 'homepage' %}" class="main-btn home-btn">
+                <i class="fa fa-home"></i> {% trans "Bosh sahifaga qaytish" %}
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

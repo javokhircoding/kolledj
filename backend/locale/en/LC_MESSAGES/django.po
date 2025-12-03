@@ -572,3 +572,15 @@ msgstr ""
 "My goal is to turn the Technical into the most advanced practical education center in the region, "
 "to educate young people as competitive specialists in tourism, service, and economy, to teach according to "
 "international standards, and to contribute to the tourism potential of Uzbekistan."
+
+msgid "Sahifa topilmadi"
+msgstr "Page not found"
+
+msgid "Xatolik"
+msgstr "Error"
+
+msgid "Kechirasiz, siz izlayotgan sahifa o'chirilgan, nomi o'zgartirilgan yoki vaqtinchalik mavjud emas."
+msgstr "Sorry, the page you are looking for has been deleted, renamed, or is temporarily unavailable."
+
+msgid "Bosh sahifaga qaytish"
+msgstr "Return to Home Page"
