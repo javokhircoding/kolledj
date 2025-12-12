@@ -40,4 +40,4 @@ class HaqimizdaAdmin(admin.ModelAdmin):
 @admin.register(Rahbariyat)
 class RahbariyatAdmin(admin.ModelAdmin):
     list_display = ['ism_familya']
-    inlines = [GalleryImageInline]
+

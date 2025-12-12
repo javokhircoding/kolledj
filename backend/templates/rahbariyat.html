@@ -29,21 +29,22 @@
     </section>
 
     
+{% for object in objects %}
     <section id="teachers-singel" class="pt-70 pb-120 gray-bg">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-8">
                     <div class="teachers-left mt-50">
                         <div class="hero">
-                            <img src="{% static 'images/teachers/image.png' %}" alt="Teachers">
+                            <img src="{{ object.image.url }}" alt="Teachers">
                         </div>
                         <div class="name">
-                            <h6>{% trans "Direktor" %}</h6>
-                            <span>{% trans "G`anixodjaev Saidazim Amanullaevich" %}</span>
+                            <h6>{{ object.sohasi }}</h6>
+                            <span>{{ object.ism_familya }}</span>
                         </div>
                         
                         <div class="description">
-                            <p>{% trans "– Fan doktori, Ph.D., Xokkaydo Universiteti, Yaponiya." %}</p>
+                            <p>{{ object.mutaxassis }}</p>
                         </div>
                     </div> <!-- teachers left -->
                 </div>
@@ -51,7 +52,7 @@
                     <div class="teachers-right mt-50">
                         <ul class="nav nav-justified" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true">{% trans "Direktor" %}</a>
+                                <a class="active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true">{{ object.sohasi }}</a>
                             </li>
                         </ul> <!-- nav -->
                         <div class="tab-content" id="myTabContent">
@@ -59,15 +60,15 @@
                                 <div class="dashboard-cont">
                                     <div class="singel-dashboard pt-40">
                                         <h5>{% trans "Haqimda" %}</h5>
-                                        <p>{% trans "Ganixodjaev Saidazim Amanullaevich — Toshkent turizm va madaniy meros texnikumi direktori, fan doktori (PhD), Yaponiya Xokkaydo Universiteti bitiruvchisi. Ta’limda innovatsiyalar, xalqaro aloqalarni kengaytirish va zamonaviy kadrlar tayyorlash bo‘yicha katta tajribaga ega." %}</p>
+                                        <p>{{ object.haqida }}</p>
                                     </div> <!-- singel dashboard -->
                                     <div class="singel-dashboard pt-40">
                                         <h5>{% trans "Yutuqlar" %}</h5>
-                                        <p>{% trans "Direktor rahbarligida texnikum o‘quv dasturlarini modernizatsiya qildi, dual ta’limni joriy etdi, xalqaro hamkorlikni kengaytirdi va 2024-yilda texnikumning yangi maqomga ega bo‘lishi jarayonida faol ishtirok etdi. 46 yil davomida 4228 nafar mutaxassis tayyorlandi." %}</p>
+                                        <p>{{ object.yutuqlar }}</p>
                                     </div> <!-- singel dashboard -->
                                     <div class="singel-dashboard pt-40">
                                         <h5>{% trans "Mening maqsadlarim" %}</h5>
-                                        <p>{% trans "Maqsadim — texnikumni mintaqadagi eng ilg‘or amaliy ta’lim markaziga aylantirish, yoshlarni turizm, servis va iqtisodiyot sohalarida raqobatbardosh mutaxassis sifatida tarbiyalash, xalqaro standartlarga mos o‘qitish va O‘zbekistonning turizm salohiyatiga hissa qo‘shish." %}</p>
+                                        <p>{{ object.maqsadlarim }}</p>
                                     </div> <!-- singel dashboard -->
                                 </div> <!-- dashboard cont -->
                         </div> <!-- tab content -->
@@ -76,5 +77,6 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
+{% endfor %}
 
 {% endblock %}

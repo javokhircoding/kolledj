@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 from django.utils.translation import gettext as _
 from django.utils.translation import get_language, activate, gettext
 
-from .models import Elonlar, Yangiliklar, Yunalishlar
+from .models import Elonlar, Yangiliklar, Yunalishlar, Rahbariyat, Haqimizda
 
 
 class HomepageView(TemplateView):
@@ -58,11 +58,16 @@ class YunalishView(ListView):
 
 
 ############ Qo`shimcha
-class TarixView(TemplateView):
+class TarixView(DetailView):
+    model = Haqimizda
+    context_object_name = 'object'
     template_name = 'haqida.html'
 
-class RaxbariyatView(TemplateView):
+class RaxbariyatView(ListView):
+    model = Rahbariyat
     template_name = 'rahbariyat.html'
+    context_object_name = 'objects'
+
 
 class HamkorlikView(TemplateView):
     template_name = 'hamkorlik.html'

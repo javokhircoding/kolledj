@@ -135,14 +135,6 @@ class GalleryImage(models.Model):
         blank=True,
         related_name='gallery'
     )
-
-    rahbariyat = models.ForeignKey(
-        'Rahbariyat',
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
-        related_name='gallery'
-    )
     
     image = models.ImageField(upload_to='galleries/')
     caption = models.CharField(max_length=255, blank=True)
@@ -159,6 +151,8 @@ class Rahbariyat(models.Model):
     haqida = models.TextField(blank=False, null=False)
     yutuqlar = models.TextField(blank=False, null=False)
     maqsadlarim = models.TextField(blank=False, null=False)
+    image = models.ImageField(upload_to='rahbariyat/', blank=False, null=False)
+
 
     class Meta:
         verbose_name_plural = _("Rahbariyat")
