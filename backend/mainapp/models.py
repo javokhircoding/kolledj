@@ -127,6 +127,22 @@ class GalleryImage(models.Model):
         blank=True,
         related_name='gallery'
     )
+
+    haqimizda = models.ForeignKey(
+        'Haqimizda',
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name='gallery'
+    )
+
+    rahbariyat = models.ForeignKey(
+        'Rahbariyat',
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name='gallery'
+    )
     
     image = models.ImageField(upload_to='galleries/')
     caption = models.CharField(max_length=255, blank=True)
@@ -135,5 +151,24 @@ class GalleryImage(models.Model):
         verbose_name = "Gallery Image"
         verbose_name_plural = "Gallery Images"
         
+
+class Rahbariyat(models.Model):
+    ism_familya = models.CharField(blank=False, null=False)
+    sohasi = models.CharField(max_length=100, blank=False, null=False)
+    mutaxassis = models.TextField(blank=False, null=False)
+    haqida = models.TextField(blank=False, null=False)
+    yutuqlar = models.TextField(blank=False, null=False)
+    maqsadlarim = models.TextField(blank=False, null=False)
+
+    class Meta:
+        verbose_name_plural = _("Rahbariyat")
+
     def __str__(self):
-        return f"Image for post ID {self.elonlar.id if self.elonlar else self.yangiliklar.id}"
+        return self.ism_familya
+
+class Haqimizda(models.Model):
+    title = models.CharField(blank=False, null=False)
+    description = models.TextField(blank=False, null=False)
+
+    class Meta:
+        verbose_name_plural = _("Haqimizda")

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Elonlar, Yangiliklar, Yunalishlar, GalleryImage
+from .models import Elonlar, Yangiliklar, Yunalishlar, GalleryImage, Haqimizda, Rahbariyat
 
 
 class GalleryImageInline(admin.TabularInline):
@@ -30,3 +30,14 @@ class YunalishlarAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'description']
     list_display_links = ['title']
 
+
+@admin.register(Haqimizda)
+class HaqimizdaAdmin(admin.ModelAdmin):
+    list_display = ['title']
+    inlines = [GalleryImageInline]
+
+
+@admin.register(Rahbariyat)
+class RahbariyatAdmin(admin.ModelAdmin):
+    list_display = ['ism_familya']
+    inlines = [GalleryImageInline]
